@@ -26,9 +26,7 @@ jobs:
           gradle-version: "8.7"
 
       - name: APK derle
-        run: |
-          chmod +x ./gradlew
-          ./gradlew assembleDebug --no-daemon --stacktrace
+        run: gradle assembleDebug --no-daemon --stacktrace
 
       - name: APK yayinla
         uses: softprops/action-gh-release@v2
